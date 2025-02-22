@@ -33,7 +33,7 @@
 
         <div class="mb-3" d-flex align-items-center>
             <label asp-for="Year" class="text-start fw-bold">Year:</label>
-            <input asp-for="Year" class="form-control col-9"/>
+            <input asp-for="Year" class="form-control col-9" min="1888"/>
             <span asp-validation-for="Year" class="text-danger"></span>
         </div>
 
