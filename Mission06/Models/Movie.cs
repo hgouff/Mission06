@@ -9,27 +9,33 @@ namespace Mission06.Models;
 //determine if they're required or if they can be left null
 public class Movie
 {
-    [Required]
     [Key]
     public int MovieId { get; set; }
     
     [Required]
+    public int CategoryId { get; set; } // Keep the FK as an int
+    
     [ForeignKey("CategoryId")]
-    public int CategoryId { get; set; }
-    public Category CategoryName { get; set; }
+    public Category? Category { get; set; } // This is the navigation property
     
     [Required]
-    public string Title { get; set; }
+    public string? Title { get; set; } 
+    
     [Required]
-    public int Year { get; set; }
+    public string? Year { get; set; } 
+    
     [Required]
-    public string Director { get; set; }
+    public string? Director { get; set; } 
+    
     [Required]
-    public string Rating { get; set; }
-    public bool? Edited { get; set; }
+    public string? Rating { get; set; } 
+    
+    [Column(TypeName = "INTEGER")]
+    public bool Edited { get; set; }
     public string? LentTo { get; set; }
     
     [Required]
+    [Column(TypeName = "INTEGER")]
     public bool CopiedToPlex { get; set; }
     
     [StringLength(25, ErrorMessage = "Notes cannot exceed 25 characters.")]

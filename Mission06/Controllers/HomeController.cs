@@ -58,16 +58,26 @@ public class HomeController : Controller
     {
         var movies = _context.Movies
             // .Where(x => x.Year >= 1888)
+            .Include(x => x.Category)
             .OrderBy(x => x.Title)
-            .Select(x => new Movie
+            .Select(m => new Movie
             {
-                Title = x.Title ?? "Unknown Title",  // Handle NULL title
-                // CategoryName= x.CategorId ?? "Unknown Category",  // Handle NULL genre
-                Director = x.Director ?? "Unknown Director", // Handle NULL director
-                
+                MovieId = m.MovieId,
+                Title = m.Title ?? "Unknown",  // Handle NULL
+                Year = m.Year ?? "0000",       // Handle NULL
+                Director = m.Director ?? "Unknown",
+                Rating = m.Rating ?? "Not Rated",
+                LentTo = m.LentTo ?? string.Empty, // Ensure no null for LentTo
+                Notes = m.Notes ?? string.Empty,
+                CopiedToPlex = m.CopiedToPlex ? true : false, 
+                Edited = m.Edited ? true : false 
+               
             })
             .ToList();
-
+            foreach (var movie in movies)
+            {
+                Console.WriteLine($"Movie: {movie.Title}, CopiedToPlex: {movie.CopiedToPlex}, Edited: {movie.Edited}");
+            }
         return View(movies);
     }
 
