@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/hannahgouff/RiderProjects/Mission06/Mission06/Views/Home/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/hannahgouff/RiderProjects/Mission06/Mission06/Views/Home/GetToKnowJoel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9HZXRUb0tub3dKb2VsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/hannahgouff/RiderProjects/Mission06/Mission06/Views/Home/MovieCollection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Nb3ZpZUNvbGxlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hannahgouff/RiderProjects/Mission06/Mission06/Views/Home/MovieList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Nb3ZpZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/hannahgouff/RiderProjects/Mission06/Mission06/Views/Shared/_ValidationScriptsPartial.cshtml]
